@@ -1,0 +1,40 @@
+[package]
+name = "ore-ev-bot"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Expected Value bot for ORE protocol"
+repository.workspace = true
+
+[[bin]]
+name = "ore-ev-bot"
+path = "src/main.rs"
+
+[dependencies]
+# Ore
+ore-api.workspace = true
+
+# Solana
+solana-sdk.workspace = true
+solana-client.workspace = true
+steel = { workspace = true }
+
+# Atlas (local)
+atlas = { path = "../atlas" }
+
+# Async
+tokio.workspace = true
+
+# Serialization
+serde.workspace = true
+serde_json.workspace = true
+bincode.workspace = true
+
+# CLI & Errors
+anyhow.workspace = true
+
+# Utilities
+spl-token.workspace = true
+rand = "0.8"
+clap = { version = "4.5", features = ["derive"] }
+csv = "1.3"
